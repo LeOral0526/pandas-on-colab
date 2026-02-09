@@ -25,3 +25,19 @@ gold_medalists_2022 = data[
 ]
 
 print(gold_medalists_2022)
+
+
+
+from google.colab import files
+
+uploaded = files.upload()
+
+import pandas as pd
+
+data = pd.read_csv("winter_olympics.csv")
+
+filtered = data [(data["country"] == "USA") & (data["age"] < 22)]
+
+result = filtered[["athlete", "sport", "medal"]]
+
+print(result)
