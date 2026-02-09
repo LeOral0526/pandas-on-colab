@@ -41,3 +41,17 @@ filtered = data [(data["country"] == "USA") & (data["age"] < 22)]
 result = filtered[["athlete", "sport", "medal"]]
 
 print(result)
+
+
+
+from google.colab import files
+
+uploaded = files.upload()
+
+import pandas as pd
+
+data = pd.read_csv("winter_olympics.csv")
+
+sorted_by_age = data.sort_values(by="age")
+
+print(sorted_by_age)
