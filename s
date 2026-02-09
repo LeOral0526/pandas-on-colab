@@ -55,3 +55,18 @@ data = pd.read_csv("winter_olympics.csv")
 sorted_by_age = data.sort_values(by="age")
 
 print(sorted_by_age)
+
+
+
+
+from google.colab import files
+
+uploaded = files.upload()
+
+import pandas as pd
+
+data = pd.read_csv("winter_olympics.csv")
+
+sorted_results = filtered.sort_values(by="age", ascening=False)
+
+print(sorted_by_age)
