@@ -1,0 +1,11 @@
+from google.colab import files
+
+uploaded = files.upload()
+
+import pandas as pd
+
+data = pd.read_csv("winter_olympics.csv")
+
+selected = data[["athlete", "sport", "medal"]]
+
+print(selected)
